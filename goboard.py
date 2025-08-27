@@ -6,6 +6,9 @@ class GoString:
         self.stones = set(stones)
         self.liberties = set(liberties)
 
+    def remove_liberty(self, point:Point):
+        self.liberties.remove(point)
+
     def add_liberty(self, point: Point):
         self.liberties.add(point)
 
