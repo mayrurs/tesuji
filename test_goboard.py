@@ -30,7 +30,10 @@ def test_merge_with():
     assert merged_string.stones == set([Point(1,1), Point(2,1), Point(3,1)])
     assert merged_string.liberties  == set([Point(1,2), Point(2,2), Point(3,2), Point(4,1)])
 
+def test_return_gostring_len():
+    gostring = GoString(color="black", stones=[Point(1,1), Point(2,1)], liberties=[Point(1,2), Point(2,2), Point(3,1)])
 
+    assert gostring.num_liberties == 3
 
 
 

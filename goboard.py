@@ -18,6 +18,10 @@ class GoString:
         liberties = (self.liberties | other.liberties) - stones
         return GoString(self.color, stones, liberties)
 
+    @property
+    def num_liberties(self):
+        return len(self.liberties)
+
 
 
 class Board:
