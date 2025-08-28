@@ -12,6 +12,12 @@ class GoString:
     def add_liberty(self, point: Point):
         self.liberties.add(point)
 
+    def merge_with(self, other: GoString):
+        assert self.color == other.color
+        stones = self.stones | other.stones
+        liberties = (self.liberties | other.liberties) - stones
+        return GoString(self.color, stones, liberties)
+
 
 
 class Board:
