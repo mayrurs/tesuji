@@ -26,4 +26,7 @@ class GoString:
 
 class Board:
     def __init__(self, row, col):
+    def is_on_grid(self, point: Point): 
+        return 1 <= point.row <= self.num_rows and 1 <= point.col <= self.num_cols
+
         pass

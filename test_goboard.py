@@ -35,5 +35,19 @@ def test_return_gostring_len():
 
     assert gostring.num_liberties == 3
 
+def test_point_is_on_grid_returns_true():
+    board = Board(3,3)
+    point1 = Point(1,1)
+    point2 = Point(3,3)
 
+    assert board.is_on_grid(point1)
+    assert board.is_on_grid(point2)
+
+def test_point_is_not_on_grid_returns_false():
+    board = Board(3,3)
+    point1 = Point(0,1)
+    point2 = Point(4,4)
+
+    assert board.is_on_grid(point1) is False
+    assert board.is_on_grid(point2) is False
 
