@@ -17,7 +17,7 @@ def test_point():
 def test_point_neighbors(): 
     point = Point(2,2)
 
-    assert point.neighbors() == [
+    assert point.neighbors == [
         Point(1,2), Point(2,3), Point(3,2), Point(2,1)
     ]
     
