@@ -1,6 +1,18 @@
 from goboard import GoString
 from gotypes import Point
 
+def test_equal_string_return_true():
+    string1 = GoString("black", [Point(1,1), Point(2,1)], liberties=[Point(1,2), Point(2,2), Point(3,1)])
+    string2 = GoString("black", [Point(1,1), Point(2,1)], liberties=[Point(1,2), Point(2,2), Point(3,1)])
+
+    assert string1 == string2
+
+def test_unequal_string_return_false():
+    string1 = GoString("black", [Point(1,1), Point(2,1)], liberties=[Point(1,2), Point(2,2), Point(3,1)])
+    string2 = GoString("black", [Point(1,1), Point(2,1)], liberties=[Point(2,2), Point(3,1)])
+
+    assert string1 != string2
+
 def test_add_liberty():
     stones = [Point(1,1), Point(1,2)]
     liberties = []

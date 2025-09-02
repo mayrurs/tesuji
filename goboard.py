@@ -22,6 +22,10 @@ class GoString:
     def num_liberties(self):
         return len(self.liberties)
 
+    def __eq__(self, other):
+        return self.color == other.color and \
+               self.stones == other.stones and \
+               self.liberties == other.liberties
 
 
 class Board:
